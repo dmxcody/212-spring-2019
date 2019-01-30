@@ -30,7 +30,7 @@ Micro-tutoring aims to provide a focused approach to any student wishing to impr
 
 Along with the crash course in C++, micro-tutored students are required to complete weekly (additional) problem sets. 
 These problem sets will be sourced from [Kattis](https://uri.kattis.com/courses/CSC212/Spring19), a site dedicated to hosting small programming challenges. 
-Comprising of ~20 mandatory, and ~5 optional problems for the bored; they are designed to be challenging, yet rewarding.
+Comprising of ~24 mandatory problems, split into two sessions, the first of which will be open for 3 days, the second open for 4; they are designed to be challenging, yet rewarding. 
 
 ### Signing up for Kattis and Registering for the Course
 
