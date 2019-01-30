@@ -11,15 +11,15 @@ Micro-tutoring aims to provide a focused approach to any student wishing to impr
 
 ### Week 1 
 - Wednesday, Jan 30, 6-7 PM: First General Meeting @ Tyler 55
-- Homework assigned on Jan 30: Problem Set 01 (Kattis 1.1 -> 1.3)
+- Problem Set 01 assigned on Jan 30: Problem Set 01 (Kattis 1.1 -> 1.3)
 - Saturday, Feb 2, 11-5 PM: Crash Course Session 1 @ Ballentine 115
 
 ### Week 2
-- Homework assigned on Feb 6: Problem Set 02 (Kattis 1.4 -> 1.6)
+- Problem Set 02 assigned on Feb 6: Problem Set 02 (Kattis 1.4 -> 1.6)
 - Saturday, Feb 9, 11-5 PM: Crash Course Session 2 @ Ballentine 115
 
 ### Week 3
-- Homework assigned on Feb 13: Problem Set 03 (Kattis 1.7 -> 1.9)
+- Problem Set 03 assigned on Feb 13: Problem Set 03 (Kattis 1.7 -> 1.9)
 
 ### Week 4
 - Saturday, Feb 23, 11-3 PM: Mock Programming Competition @ Ballentine 115
@@ -29,7 +29,7 @@ Micro-tutoring aims to provide a focused approach to any student wishing to impr
 ## Problem Sets
 
 Along with the crash course in C++, micro-tutored students are required to complete weekly (additional) problem sets. 
-These problem sets will be sourced from [Kattis](http://open.kattis.com), a site dedicated to hosting small programming challenges. 
+These problem sets will be sourced from [Kattis](http://uri.kattis.com), a site dedicated to hosting small programming challenges. 
 Comprising of ~20 mandatory, and ~5 optional problems for the bored; they are designed to be challenging, yet rewarding.
 
 ## Focused Tutoring
