@@ -32,6 +32,23 @@ Along with the crash course in C++, micro-tutored students are required to compl
 These problem sets will be sourced from [Kattis](https://uri.kattis.com/courses/CSC212/Spring19), a site dedicated to hosting small programming challenges. 
 Comprising of ~20 mandatory, and ~5 optional problems for the bored; they are designed to be challenging, yet rewarding.
 
+### Signing up for Kattis and Registering for the Course
+
+1. Go to [Kattis](https://uri.kattis.com/), and select 'Log In' from the top-right corner.
+2. Proceed to either log into Kattis, or create an account.
+3. After creating an account, or signing in, select 'Courses' from the menu.
+4. Select 'Spring 19'
+5. Select the link: 'I am a student taking this course and I want to register for it on Kattis.'
+6. Select Register
+
+### Registering for the Sessions
+
+1. Go to [URI Kattis Spring 19](https://uri.kattis.com/courses/CSC212/Spring19)
+2. Select whichever session you need to register for.
+3. Select 'Join the Session' from the top-right corner.
+
+> Sessions are not team activities. Please do not add any team members to your group.
+
 ## Focused Tutoring
 
 During these sessions you will meet with your designated TA to go over the weekly problem sets. 
