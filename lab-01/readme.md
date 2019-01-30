@@ -37,18 +37,14 @@ You have two options for how you would like to install/use CS50 IDE, and you nee
 
 \- Slightly more complex setup
 
-\- Is somewhat more prone to breaking/not working
-
 \- Requires installation of Docker and (through Docker) the IDE.
-
-We recommend using the Online option, however if you think you will need to do any of your assignments (or any other C++ programming) offline, or if you want to try to create a more complex program that uses resources beyond what the online installation provides, then you may want to look into the Offline option.
 
 ### 1.2 Online Option - Setup
 
 The steps to set up the online version of CS50 IDE are as follows:
 
 1. If you do not already have one, [create an account at edx.org](https://courses.edx.org/register/)
-2. An activation email should be sent to the email addressed used to create your account. Activate your edX account using said activation email.
+2. An activation email should be sent to the email address used to create your account. Activate your edX account using said activation email.
 3. Go to [cs50.io](cs50.io), make sure edX is selected in the dropdown menu, and click "Go".
 4. You should be redirected to an edX page. Click "Allow".
 5. You should then be redirected back to cs50.io, where the IDE will begin to load. Once the IDE has loaded, type "update50" into the terminal at the bottom of the screen and hit enter.
@@ -124,7 +120,7 @@ If you installed the **Docker Toolbox**, open up the **Docker QuickStart Termina
 $ docker run --privileged -e "IP=$(docker-machine ip default)" -e "PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide
 ```
 
-### 1.3.6 Ensuring cs50ide is running:
+#### 1.3.6 Ensuring cs50ide is running:
 
 Type the following in your browser to access the IDE:
 
@@ -146,7 +142,7 @@ In your browser type the ip address you received followed by the port :5050 to a
 For example:
 > [http://192.168.99.100:5050](http://192.168.99.100:5050)
 
-### 1.3.7 Important Notes:
+#### 1.3.7 Important Notes:
 
 1. At this point you may notice a banner along the top of your window noting that your current version is out of date. We recommend that you keep your IDE up-to-date as best as possible. To update, run `update50` in the built-in shell, which should be titled 'workspace/'. You'll then have to restart the docker instance by running:
 
@@ -161,7 +157,7 @@ In order to access the IDE again, run Docker and type the following:
 $ docker start ide50
 ```
 
-## 1.4 Other IDEs:
+### 1.4 Other IDEs:
 
 While CS50 IDE is recommended for this course, some other IDE options are:
 
@@ -278,11 +274,11 @@ Create and debug each line of the following program:
 #include <iostream>
 
 int main() {
-    int a = 2;
-    int b = 4;
-    int c = a + b;
-    std::cout << c << std::endl;
-    return 0;
+	int a = 2;
+	int b = 4;
+	int c = a + b;
+	std::cout << c << std::endl;
+	return 0;
 }
 ```
 
@@ -302,7 +298,7 @@ int main() {
 	int y = 4;
 	int z = pow(x, y);
 	std::cout << x << "^" << y << "=" << z << std::endl;
-    return 0;
+	return 0;
 }
 
 /* A Naive method for calculating powers */
@@ -312,6 +308,7 @@ int pow(int a, int b) {
 		result *= a;
 		--b;
 	}
+	return result;
 }
 ```
 
@@ -319,14 +316,15 @@ int pow(int a, int b) {
 
 >___Please record the answers to the following questions on a separate text file.  Your attendance will be recorded after you submit such file.___
 
+
 ### 4.1 Exercise 1
 
 > If you are not familiar with arrays, read [this](http://www.cplusplus.com/doc/tutorial/arrays/) first.
 
-For this exercise you will write a program that creates an array of 10 integers and prints the memory addresses of each element to the standard output (console).  You can fill the array with any values you like.  The contents of the array do not matter for this exercise.  The syntax to print the memory address of the 3rd element in an array is as follows:
+For this exercise you will write a program that declares an array of 10 integers and prints the memory addresses of each element to the standard output (console).  You can fill the array with any values you like.  The contents of the array do not matter for this exercise.  The syntax to print the value and memory address of the 3rd element in an array is as follows:
 
 ```c++
-std::cout << &array[2] << std::endl;
+std::cout << array[2] << " is stored at memory address: " << &array[2] << std::endl;
 ```
 
 Remember to print newlines after every value to help readability (`std::endl`). Make sure to `#include <iostream>` so that you can use `std::cout` to print your results for each exercise.  If you prefer to use `printf`, it is also acceptable.
@@ -340,6 +338,7 @@ Remember to print newlines after every value to help readability (`std::endl`). 
 1. How do these factors change when you declare your array as a `double` instead of `int`?
 1. How do these factors change when you declare your array as a `char` instead of `int`?
 1. Explain why the answers to the last 4 questions above may differ.
+
 
 ### 4.2 Exercise 2
 
@@ -364,22 +363,19 @@ std::cout << (int) str[counter] << std::endl;
 #### Questions
 1. Paste the source code of your program
 1. What is the maximum length of a string you can store in this array? How many bytes long is that?
-2. What is the memory address of the null character?
 3. What happens if you try to assign a string longer than the max length?  If you are unsure, try it!
 4. What do the numeric values printed out when a `char` is cast to an int represent?
 5. What happens if you print the contents of the array without making an assignment (initializing the array)?
 
 ### 4.3 Exercise 3
 
-For this excercise you will write a recursive program that performs multiplication without using the `*` operator. For this excercise you must write both a `main`, and a function to perform the recursive multiplication. 
-Your program should instantiate at least two integer variables and run the function. 
+For this exercise you will write a program that performs multiplication without using the `*` operator. For this excercise you must write both a `main`, and a function `int mul(int a, int b)` to perform the multiplication. 
+Your main function should instantiate at least two integer variables and call the `mul` function. 
 
 #### Questions
-1. Pase the source code of your program
-1. What are the memory addresses of your variables within `main` and within your function? Why might these differ?
-1. As your multiplication function executes, watch the call stack. How many calls are made to mutliply `2` and `4`?
-1. Examine the values of the variables throughout the call stack, which values change?
-1. Modify the value of a variable from the first call to the function, what impact does this have on the final answer?
+1. Paste the source code of your program
+1. As your multiplication function executes, how many iterations in the main loop of your function are performed to multiply `2` and `4`?
+1. Using the debugger, examine the values of the variables throughout a step-by-step execution, which values change when we multiply `2` and `3`?
 
 ## Submission
 You will submit a single **text file** named `lab-01.txt` containing all your answers on [Gradescope](http://gradescope.com).  Please ensure your text file has the following format:
