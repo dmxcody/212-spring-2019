@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[margin=.9in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2019}\chead{}\rhead{\scriptsize Weekly Problem Set \#1}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Spring 2019}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#1}
+\end{center}
+
+\vspace{25pt}
+
+This assignment is due Thursday 2/7 before lecture.  Please turn in neat, and organized, answers hand-written on standard-sized paper {\bf without any fringe}. The only library you're allowed to use in your answers is \verb|iostream|, though you can test with whatever you'd like. Problem set 1 is about strings, arrays, functions, and pointers, some of the most fundamental concepts in C/C++ programming.
+
+\begin{enumerate}[leftmargin=*]
+
+\item Provide a sequence of Bash commands that will:
+    \begin{itemize}
+        \item go to your default home directory;
+        \item create a directory test;
+        \item rename test to myproject;
+        \item enter the directory myproject;
+        \item create a new empty file main.c;
+        \item list all files in myproject, including hidden files;
+        \item return to the parent directory.
+    \end{itemize}
+
+\item Provide a sequence of Bash commands that will:
+    \begin{itemize}
+        \item create files a.txt, b.txt, and c.txt;
+        \item write the line a: 1 2 3 4 5 to a.txt;
+        \item write the line b: 6 7 8 9 10 to b.txt;
+        \item write the line a: 11 12 13 14 15 to c.txt;
+        \item concatenate a.txt, b.txt, and c.txt into all.txt.
+    \end{itemize}
+
+\item Convert the following binary numbers to decimals:
+    \begin{itemize}
+        \item \verb|1010010010010000|
+        \item \verb|0001000101010001|
+        \item \verb|1001010100001100|
+        \item \verb|0001010101011011|
+    \end{itemize}
+
+\item Convert the binary numbers from the previous exercise to hexadecimals
+
+\item Convert your Student ID number to hexadecimal representation. Hint: convert to binary, and then, to hexadecimal.
+
+% CodeForWin
+\item Write a function that returns a missing number in an array of integers ranging from 1 to $n$. For example, given $[3, 2, 1, 5]$ and $n=5$, output \verb|4|.
+
+\item What is the output of the following code? If it breaks at any point, indicate what went wrong.
+\begin{verbatim}
+    #include <iostream>
+
+    int mystery(int x, int *y) {
+        x = x + 10;
+        *y = x * 2;
+        return x;
+    }
+
+    int* mystery2() {
+        int x = 50;
+        return &x;
+    }
+
+    int main() {
+        int x = 2, y = 3;
+        x = mystery(x, &y);
+        std::cout << "(x, y): (" << x << ", " << y << ")" << std::endl;
+        int *z = mystery2();
+        std::cout << "z: " << *z << std::endl;
+    }
+\end{verbatim}
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
