@@ -11,15 +11,15 @@ Micro-tutoring aims to provide a focused approach to any student wishing to impr
 
 ### Week 1 
 - Wednesday, Jan 30, 6-7 PM: First General Meeting @ Tyler 55
-- Problem Set 01 assigned on Jan 30: Problem Set 01 (Kattis 1.1 -> 1.3)
+- Problem Set 01 (parts A and B) starting on Jan 30: (Kattis 1.1 -> 1.3)
 - Saturday, Feb 2, 11-5 PM: Crash Course Session 1 @ Ballentine 115
 
 ### Week 2
-- Problem Set 02 assigned on Feb 6: Problem Set 02 (Kattis 1.4 -> 1.6)
+- Problem Set 02 (parts A and B) starting on Feb 6: (Kattis 1.4 -> 1.6)
 - Saturday, Feb 9, 11-5 PM: Crash Course Session 2 @ Ballentine 115
 
 ### Week 3
-- Problem Set 03 assigned on Feb 13: Problem Set 03 (Kattis 1.7 -> 1.9)
+- Problem Set 03 (parts A and B) starting on Feb 13: (Kattis 1.7 -> 1.9)
 
 ### Week 4
 - Saturday, Feb 23, 11-3 PM: Mock Programming Competition @ Ballentine 115
