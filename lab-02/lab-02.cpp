@@ -97,9 +97,9 @@ int main() {
     int *arr = gen_rand_list(20);
     // Create a single random integer between -10 and 10. This does not need to be deallocated
     int num = gen_rand_int(-10, 10);
-    // Apply the three functions to the array with lenght=20 and num=15
+    // Apply the three functions to the array with lenght=20 and num randomly generated
     for (int i = 0; i < 3; i++) {
-        functions[i](arr, 20, 15);
+        functions[i](arr, 20, num);
     }
     // Since the array was allocated on the heap, it needs to be deallocated, which is what the following function does
     delete_list(arr);
