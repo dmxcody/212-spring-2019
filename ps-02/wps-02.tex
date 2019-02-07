@@ -1,1 +1,161 @@
+\documentclass[11pt]{article}
 
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2019}\chead{}\rhead{\scriptsize Weekly Problem Set \#2}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2019}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#2}
+\end{center}
+
+Due Thursday 2/14 at the beginning of class. Please turn in neat, and organized, answers hand-written on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+
+\begin{enumerate}[leftmargin=*]
+% good resource for a quick review of condensing logarithms:
+% https://www.chilimath.com/lessons/advanced-algebra/combining-or-condensing-logarithms/
+\item Simplify the following: 
+\begin{itemize}
+    \item \( \log_2 xy^2 - \log_2 x^2 - 2 \log_2 y \)
+    \item \( \log_2 (16x^2)^\frac{1}{3} \)
+    \item \( \log_3(9x^4) - \log_3(3x)^2\)
+\end{itemize}
+
+% https://maths.mq.edu.au/numeracy/web_mums/module2/Worksheet27/module2.pdf
+
+\item Solve for x: \( \log_{2} \frac{x^2}{2} = 5 \)
+
+\item Evaluate: \( \sum\limits_{x=0}^3 (5 + \sqrt{4^x}) \)
+% https://www.math.ucdavis.edu/~kouba/CalcTwoDIRECTORY/summationdirectory/Summation.html
+
+\item Solve the following: \( \sum\limits_{n=0}^{10} (-n) \)
+
+% pg 131/#140 of the resource textbook gives a nioce summary of induction
+% http://courses.csail.mit.edu/6.042/spring17/mcs.pdf
+
+\item Prove that: \( \sum\limits_{i=1}^{x} i = \frac{(x + 1)x}{2} \)
+% https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/Proofs.html#direct-proof
+
+\item Rewrite the following expression into its closed form (i.e. without the sigma): \( \sum_{i=1}^n (2 + i) \).
+
+
+\item For each of the following, give an exact formula T(n) for the number of times //op is run: 
+(assume i+=1 each iteration unless otherwise specified)
+
+
+        \begin{verbatim}
+Ex.     T(n) = n
+        for i = 1 to n do
+            // constant time operation
+        \end{verbatim}
+        
+        \begin{enumerate}
+        \item
+        \begin{verbatim}
+        for i = 1 to 4n do
+            // constant time operation
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for i = 1 to n*n*n do
+            // constant time operation
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for i = 1 to 4n do
+            for j = 1 to i do
+                // constant time operation
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for i = 1 to n*n do
+            for j = 1 to i do
+                // constant time operation
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for i = 1 to n do
+            for j = 1 to n do
+                for k = 1 to n do
+                    // constant time operation
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for(int i=0; i<n; i+=2) {
+            // constant time operation
+        }
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for(int i=0; i<n; i+=4) {
+            // constant time operation
+        }
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for(int i = 1; i < 2^n; 1*=2) {
+            // constant time operation
+        }
+        \end{verbatim}
+        \item
+        \begin{verbatim}
+        for(int i = n; i > 1 ; i/=2) {
+            // constant time operation
+        }
+        \end{verbatim}
+        
+    \end{enumerate}
+
+\item Rank the following functions by their asymptotic growth rate in ascending order.  In your solution, group those functions that are big-Theta of one another (all $\log$ functions are base 2):
+    \begin{equation*}
+        \begin{array}{ccccc}
+            6 \cdot n\log n & 2^{100} & \log \log n & \log^2 n & 2^{\log n} \\
+            2^{2^n} & \lceil\sqrt{n}\rceil & n^{0.01} & 1/n & 4n^{3/2} \\
+            4^n & n^3 & n^2\log n & 4^{\log n} & \sqrt{\log n} \\
+        \end{array}
+    \end{equation*}
+\begin{verbatim}
+    
+    
+    
+\end{verbatim}
+\item Based on the given data, please classify each of the following as linear, quadratic, logarithmic, or none of the above. If it is none of the above, try to reason what type of curve it may be.
+\begin{itemize}
+    \item $f(0) = 4, f(1) = 6, f(2) = 9$
+    \item $f(0) = 6, f(10) = 8, f(20) = 10$
+    \item $f(0) = 80, f(0.1) = 60, f(0.2) = 45$
+    \item $f(1) = 10, f(10) = 20, f(100) = 30$
+    \item $f(0) = 2, f(3) = 12, f(5) = 240$
+\end{itemize}
+% http://faculty.bard.edu/~mbelk/math141/ExponentialExercises.pdf
+
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
