@@ -36,7 +36,7 @@ int multiply(unsigned int x, unsigned int y) {
 }
 
 int factorial(int n) {
-    return (n <= 0) ? 0 : n + factorial(--n);
+    return (n <= 0) ? 1 : n * factorial(--n);
 }
 
 void finish() {

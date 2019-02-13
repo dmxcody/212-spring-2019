@@ -44,7 +44,7 @@ $ g++ lab-03.cpp
 $ ./a.out
 ```
 
-> For those who may not have seen the `&&` operator before, it signifies that if the portion on the left executes correctly, the portion on the right should be executed as well.
+> If you wanted to perform the above two commands on one line, you could use the `&&` operator between the two commands, which signifies that if the portion on the left executes correctly, the portion on the right should be executed as well.
 
 Now, compile and run the code with a single command line argument.
 
@@ -91,7 +91,7 @@ Step out of `foo`.
 Modify the value of `n`, set it equal to 5.
 Step into `multiply`.
 
-#### Question 8: What are the values of `x, y` within the `mutliply` function?
+#### Question 8: What are the values of `x, y` within the `multiply` function?
 
 Continue hitting "Step Into" until `y == 0`.
 
@@ -167,8 +167,13 @@ gcd(a, b) = gcd(a - b, b) if a > b
 gcd(a, b) = gcd(a, b - a) if a <= b
 ```
 
+#### Question 21: Paste the source code for your `gcd` function into your answers file.
+
 Once you've written a recursive solution to the `gcd` function, you may proceed to try `print_reversed`.
 
 `print_reversed` should take a single integer, such as 12345, and print it out to the terminal in reversed order, ie 54321.
 
 To do this, you must rely on recursion, and your own ingenuity.
+
+#### Question 22: Paste the source code for your `print_reversed` function into your answers file.
+
