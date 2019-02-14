@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\linespread{1.3}
+\setlength{\parindent}{0pt}
+
+% ===========================================================================
+% Header / Footer
+% ===========================================================================
+\pagestyle{fancy}
+\lhead{\scriptsize  CSC 212: Data Structures and Abstractions - Spring 2019}\chead{}\rhead{\scriptsize Weekly Problem Set \#3}
+\lfoot{}\cfoot{\scriptsize \thepage~of~\pageref{r:lastpage}}\rfoot{}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ===========================================================================
+% ===========================================================================
+\begin{document}
+\thispagestyle{empty}
+
+% ===========================================================================
+\begin{center}
+    {\Large\bf CSC 212: Data Structures and Abstractions}\\
+    \medskip
+    {\Large\bf Spring 2019}\\
+    \medskip
+    {\Large\bf University of Rhode Island}\\
+    \bigskip
+    {\Large\bf Weekly Problem Set \#3}
+\end{center}
+
+Due Thursday 2/21 at the beginning of class. Please turn in neat, and organized, answers \textbf{hand-written} on standard-sized paper \textbf{without any fringe}. At the top of each sheet you hand in, please write your name, and ID.
+
+\begin{enumerate}[leftmargin=*]
+
+\item Prove the following. Additionally, is there a more accurate Big Omega or Big O that could be used?
+\begin{itemize}
+    \item $10n^2 = \Omega(n)$
+    \item $1 = O(n)$
+    \item $4n^3+3n+2 = O(n^3)$
+    \item $n \log n = \Omega(n \log n)$
+    \item $n^4 = O(2^n)$
+\end{itemize}
+
+\item Mark each of the following as true or false.
+    \begin{center}
+        \begin{tabular}{l | c | c | c | c | c | c}
+            T(n) & Big O & T/F & Big Omega & T/F & Big Theta & T/F \\ \hline
+            $ n^2/10 + 10 n \log n$ & $O(n \log n)$ & & $\Omega(n \log n)$ & & $\Theta(n \log n)$ & \\ \hline
+            $ 2n^2 + n \log n$ & $O(n^2)$ & & $\Omega(n)$ & & $\Theta(\log n)$ & \\ \hline
+            $(n/2) log n + 4n$ & $O(2^n)$ & & $\Omega(n \log n)$ & & $\Theta(n \log n)$ & \\ \hline
+            $10 \sqrt{n} + 2\log n$ & $O(\log n)$ & & $\Omega(n)$ & & $\Theta(\log n)$ & \\ \hline
+            $3\sqrt{n} + 10 \log n$ & $O(\sqrt n)$ & & $\Omega(1)$ & & $\Theta(\sqrt n)$ & \\ \hline
+        \end{tabular}
+    \end{center}
+    \item Complete the following table.
+    \begin{center}
+        \begin{tabular}{l | c }
+            T(n) & Big Theta \\ \hline
+            $\log n + 200 n \log n$ & \\ \hline
+            $2^n + n^2$ & \\ \hline
+            $\sqrt n + \log n$ & \\ \hline
+            $2n + 3n + 4n + 5n + 6n$ & \\ \hline
+            $\sqrt{n} + 10 \log n$ & \\ \hline
+            $200 n * 10 n + \log n$ & \\ \hline
+        \end{tabular}
+    \end{center}
+    
+    \pagebreak
+    \item Complete the following table using Big $\Theta$ notation, measuring performance by the number of comparisons.
+    \begin{center}
+        \begin{tabular}{l | c | c | c }
+            Algorithm & Best Case & Average Case & Worst Case \\ \hline
+            Selection Sort & & & \\ \hline
+            Insertion Sort & & & \\ \hline
+            Bubble Sort & & & \\ \hline
+            Maximum of an Unsorted Array & & & \\ \hline
+            Median of a Sorted Array & & & \\ \hline
+            Mode of a Sorted Array & & & \\ \hline
+        \end{tabular}
+    \end{center}
+    
+    \item Given the array \verb|A| with elements $[22, 15, 36, 44, 10, 3, 9, 13, 29, 25]$, illustrate the performance of the selection-sort algorithm from the lecture slides on \verb|A|. To illustrate the performance, depict the status of the array after line 15 at every iteration.
+    
+    \item Given the array \verb|A| with elements $[22, 15, 36, 44, 10, 3, 9, 13, 29, 25]$, illustrate the performance of the insertion-sort algorithm on \verb|A|. Again, use the function provided in the lecture notes, and depict the status of the array after line 14 at every iteration. (Line 14 signifies the moment after the if statement terminates)
+    
+    \item What type of array would yield the worst-case performance for an insertion sort array? What about the best-case performance? 
+    
+    \item Can you improve the worst-case performance of selection sort? Why or why not?
+    
+    \item How many inversions are present in each of the following arrays? (Two adjacent elements swapping places with eachother denotes an inversion)
+    \begin{enumerate}
+        \item[] A: [1, 5, 4, 3, 3, 7]
+        \item[] B: [5, 4, 3, 2, 1]
+        \item[] C: [1, 2, 3, 4, 5]
+        \item[] D: [5, 1, 3, 2, 4]
+        \item[] E: [6, 9, 1, 4, 10]
+    \end{enumerate}
+    
+\end{enumerate}
+
+\label{r:lastpage}
+
+\end{document}
