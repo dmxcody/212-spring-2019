@@ -1,4 +1,4 @@
-# Lab 02: Pointers->get_excited()
+# Lab 05: Pointers->get_excited()
 
 ## 1. Introduction
 
