@@ -6,7 +6,7 @@ In today's lab you will use CS50's `debug50` to explore and understand how point
 Understanding pointers is extremely important to this class since nearly all of the data structures that we will be creating use pointers heavily.
 
 This lab comes with two starter code files: `lab-05.cpp` and `secret-message.cpp`.
-You will use the former for the majority of the lab, as the latter is just for the optional section.
+You will use the former for the majority of the lab, as the latter is just for the final section.
 Also note that you will not need to write any code with this lab; you will need to follow through the starter code using the debugger as directed and answer questions about what you observe.
 
 This is a guided lab, so you **need** to read everything.
