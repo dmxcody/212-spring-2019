@@ -137,7 +137,7 @@ Since you haven't used Python in this class thus far, you'll need to do a tiny b
 We recommend working outside cs50 IDE, so you can visualize graphics when executing the Python script.  Unless you're using Linux go to [python.org](https://www.python.org), mouse over "Downloads" and select your operating system, click "Latest Python 3 Release...", scroll to the bottom of the page and select the most appropriate download link. If you are using Linux, go to your terminal and run `[apt-get or equivalent] install python3`).  When installing Python, make sure it's added to your system path.
 Ask a TA if you need help with the installation process.
 
-Once you have Python installed, go to your terminal (on Windows it's PowerShell, on Mac it should be just "Terminal", which you can search for with Finder) and type `pip install matplotlib`. 
+Once you have Python installed, go to your terminal (on Windows it's PowerShell, on Mac it should be just "Terminal", which you can search for with Finder) and type `python -m pip install matplotlib`. 
 It should proceed to install Matplotlib along with any libraries necessary for it to run. Y
 ou should now be ready to proceed.
 
