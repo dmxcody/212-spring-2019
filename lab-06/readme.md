@@ -81,7 +81,7 @@ Keep in mind that if some function other than `sum` is being returned to, then `
 However, if it is returning to another call to `sum`, then `total` represents the sum from 1 to n-1 from the perspective of the call it is returning to.
 
 At this point you can compile and run `sum.cpp`. 
-Since `sum` is called on 10 and on 100, you should get 55 and 4950 respectively. 
+Since `sum` is called on 10 and on 100, you should get 55 and 5050 respectively. 
 For the case of 10, you can see that the algorithm will give you the following
 
 sum(10) = 10 + sum(9) = 10 + 9 + sum(8) = ... = 10 + 9 + ... + 2 + 1 + sum(0) = 55.
