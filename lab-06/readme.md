@@ -130,16 +130,35 @@ Before becoming too alarmed, you don't need any previous knowledge of Matplotlib
 
 ### Setting Up
 
-Since you haven't used Python in this class thus far, you'll need to do a tiny bit of setup before proceeding.
+We recommend working through this section outside of cs50 IDE so that visualizing your work is easier. 
 
-> If you have a current installation of Python 3.x, you can safely ignore this section and proceed to the next one.
+#### Checking for Existing Installs
 
-We recommend working outside cs50 IDE, so you can visualize graphics when executing the Python script.  Unless you're using Linux go to [python.org](https://www.python.org), mouse over "Downloads" and select your operating system, click "Latest Python 3 Release...", scroll to the bottom of the page and select the most appropriate download link. If you are using Linux, go to your terminal and run `[apt-get or equivalent] install python3`).  When installing Python, make sure it's added to your system path.
-Ask a TA if you need help with the installation process.
+To check for existing python installations, open up your terminal and execeute `python --version`. 
+If you see 3.x you are to use `python` to execute everything that follows. 
+Otherwise, try to run `python3 --version`. 
+If this command works, you are to use `python3` to execute everything that follows. 
 
-Once you have Python installed, go to your terminal (on Windows it's PowerShell, on Mac it should be just "Terminal", which you can search for with Finder) and type `python -m pip install matplotlib`. 
-It should proceed to install Matplotlib along with any libraries necessary for it to run. Y
-ou should now be ready to proceed.
+If neither of these commands worked, you must install python. 
+
+#### Installing Python
+
+There are multiple ways to install python, the best way will depend on your system. 
+
+##### Linux
+
+To install python on Linux, run `[apt-get or equivalent] install python3`
+
+##### Windows / Mac
+
+Go to [python.org](https://www.python.org), mouse over "Downloads" and select your operating system, click "Latest Python 3 Release...", scroll to the bottom of the page and select the most appropriate download link. 
+**When installing Python, make sure it's added to your system path.**
+
+#### Installing matplotlib
+
+Once you have Python installed, go to your terminal (on Windows it's PowerShell, on Mac it should be just "Terminal", which you can search for with Finder) and type `[python or python3] -m pip install matplotlib`. 
+It should proceed to install Matplotlib along with any libraries necessary for it to run. 
+You should now be ready to proceed.
 
 ### Drawing Fractals
 
