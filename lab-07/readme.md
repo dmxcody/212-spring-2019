@@ -76,8 +76,6 @@ Part of the definition for the `MyString` class from the starter code is as foll
 
             void set(int, char);
             char get(int);
-            void del(int);
-            const char *substr(int, int);
 	    ...
     }
 ```
