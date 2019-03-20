@@ -42,25 +42,25 @@ void MyString::reverse()
 	return;
 }
 
-uint MyString::find_first(char)
+int MyString::find_first(char)
 {
 
 	return 0;
 }
 
-uint MyString::find_first(const char*)
+int MyString::find_first(const char*)
 {
 
 	return 0;
 }
 
-uint MyString::find_last(char)
+int MyString::find_last(char)
 {
 
 	return 0;
 }
 
-uint MyString::find_last(const char*)
+int MyString::find_last(const char*)
 {
 
 	return 0;
