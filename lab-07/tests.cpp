@@ -28,20 +28,6 @@ TEST_CASE("Get") {
     REQUIRE(string.get(3) == '3');
 }
 
-TEST_CASE("Del") {
-    MyString string("helloworld");
-    string.del(0);
-    string.del(5);
-    string.del(2);
-    REQUIRE(strcmp(string.c_str(), "elowrld") == 0);
-}
-
-TEST_CASE("Substr") {
-    MyString string("bananas");
-    REQUIRE(strcmp(string.substr(0, 3), "ban") == 0);
-    REQUIRE(strcmp(string.substr(2, 4), "na") == 0);
-}
-
 TEST_CASE("c_str") {
     REQUIRE(strcmp(MyString().c_str(), "") == 0);
     REQUIRE(strcmp(MyString("Hello").c_str(), "Hello") == 0);

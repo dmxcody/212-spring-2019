@@ -32,16 +32,6 @@ const char MyString::get(int)
 	return (const char)0;
 }
 
-void MyString::del(int)
-{
-	return;
-}
-
-const char *MyString::substr(int, int)
-{ 
-	return (const char*)"";
-}
-
 char* MyString::c_str()
 {
 	return (char*)"";

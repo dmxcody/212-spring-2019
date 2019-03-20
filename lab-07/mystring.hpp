@@ -15,8 +15,6 @@ class MyString {
 
 		void set(int, char);
 		const char get(int);
-		void del(int);
-		const char *substr(int, int);
 
 		char* c_str();
 

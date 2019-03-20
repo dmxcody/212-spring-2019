@@ -9,7 +9,7 @@ To accomplish this, you will be creating a `MyString` class that behaves like, a
 
 By now you should be well aware of the existence of classes (you've probably even used them before), but you may not be completely comfortable with them. 
 In this section we hope to bridge that gap, making you more comfortable both with using classes and writing them yourself. 
-We will also review dynamic memory allocation and usage, as it's one of the most important C++ concepts to be familiar with.
+We will also review dynamic memory allocation, as it's an important C++ concept to be familiar with.
 
 ### 2.1 Classes
 
@@ -41,12 +41,7 @@ Perhaps a given mammal is described by how many legs it has, what kind of food i
 Then those would be some of its properties. 
 To decide what methods a mammal may have, you can think about what a mammal (generally) does, such as walking and eating a meal. 
 Now of course, it's great to know what a mammal is, and what it does, but now we actually want to have a mammal in our program, which is where objects come in. 
-You can use your `mammal` class to create an object called `dog`, and specify that it has four legs, eats dog food (which could be another class), is not hungry at all, and weighs 60 lbs.
-
-> Moreover, we can step beyond the simple and into more complex examples, such as user profiles for a given payment application. 
-These profiles would have a portion of data, such as credit card information, which must be protected at all times. 
-Classes allow the developer to specify this protected information, along with the requisite methods for updating it. 
-Suppose that we wanted to verify all credit card numbers are actually valid upon update, instead of simply relying on the user to enter it properly; we can provide a method in the `User` class called `update_credit_info` that takes a string and performs validation on that string before storing it into a protected variable within the class. 
+You can use your `mammal` class to create an object called `dog`, and specify that it has four legs, eats dog food, is not hungry at all, and weighs 60 lbs.
 
 Hopefully if you didn't have a good conceptual understanding of classes before, you do now. 
 The next step will be to make these concepts concrete in terms of code.
@@ -92,22 +87,22 @@ This class definition has a few features that are shared between nearly all clas
 The most noticeable part of this class definition is all the functions. 
 This is where all the talk of "data members" and "methods" come into play. 
 When working with classes, a class' variables and constants are called its *data members* and its inherent functions are called its *methods*. 
-Also, since this is just a class definition, all of the methods will *only be declared*, their implementations should be in the source file; the same goes for any variables.
+Also, since this is just a class definition, all of the methods will *only be declared*, their implementations should be in the source file.
 
 The `private` and `public` keywords are used to define the *scope* of every data member and method. 
 Private data members and methods can only be accessed within the class' own methods, whereas public data members and methods can be accessed in any part of the program where an object of that class exists. 
 Sometimes you may not know when to make something private or public, but there are a few pretty straightforward rules:
 
 1. Nearly all data members (variables in particular) should be private, since you want your class to have full control over its own properties, without interference from other parts of the program. However, if you have a data member that is constant, you may consider making it public.
-2. Methods are the ways by which a class interacts with the "outside world," so to speak, so a class will likely have many methods, and if you aren't sure whether a method should be public or private, public is the more likely answer. However, if you have any sort of helper method, especially one that shouldn't ever need to be called in some other part of the program, it should be made private.
+2. Methods are the ways by which a class interacts with the "outside world", so a class will likely have many methods, and if you aren't sure whether a method should be public or private, public is the more likely answer. However, if you have any sort of helper method, especially one that shouldn't ever need to be called in some other part of the program, it should be made private.
 3. Constructors and the destructor will always be public, as you'll shortly see why.
 
 Constructors and destructors are an integral part of every class definition, and every class will have at least one constructor and one destructor (which may be implicit). 
 The essential idea behind a constructor is that when you want to create an object from a class, the class needs to know what values to assign to all of its data members. 
-Thus a constructor functions similarly to a method, except it is called when an object is first created. 
+Thus a constructor functions similarly to a method, except it is called (once) automatically when an object is first created. 
 In the case of the `MyString` class, the constructors are: `MyString();` and `MyString(const char *);`. 
 The naming here is no coincidence, as a constructor is always defined in the form `ClassName(type1 param1, type2, param2, ...);`. 
-When a constructor has no parameters, it is called the *default constructor*; **every class is required to have a default constructor**.
+When a constructor has no parameters, it is called the *default constructor*; **every class is required to have at least one constructor**.
 
 If a constructor is called when a class is created, then you might have been able to guess that the destructor is called when the class is destroyed, or deallocated. 
 An object may be destroyed when the function call in which an object was created returns, or an object created dynamically is deallocated explicitly. 
@@ -150,7 +145,7 @@ int main(void) {
 ```
 
 Your only constraint is what methods you've implemented. 
-As you will see later in this course, C++ allows you to create highly complex objects that can go so far as overloading operators (+, -, /, %, etc). 
+C++ allows you to create highly complex objects that can go so far as overloading operators (+, -, /, %, etc). 
 This "operator overloading" allows developers to make their classes function much like native objects in a language.
 
 ### 2.2 Dynamic Memory
@@ -183,8 +178,6 @@ If you want more details on dynamic memory allocation, this [document](https://w
 
             void set(int, char);
             char get(int);
-            void del(int);
-            const char *substr(int, int);
             
             const char *c_str();
             
@@ -206,17 +199,13 @@ If you want more details on dynamic memory allocation, this [document](https://w
 
 - `MyString(const char *)` --  Copy constructor; Copy the contents of the input string into the class's data member.
 
-- `MyString()` --  Destructor; Should deallocate any dynamically allocated memory that the class uses.
+- `~MyString()` --  Destructor; Should deallocate any dynamically allocated memory that the class uses.
 
 - `len()` --  Returns the length of string. This is the number of characters in the string, excluding the null terminator.
 
 - `set(int, char)` -- Sets the character at the given index to the character provided.
 
 - `get(int)` -- Returns the character at the given index.
-
-- `del(int)` -- Deletes the character at the given index.
-
-- `substr(int, int)` -- Returns the substring contained in the range [index1, index2)
 
 - `c_str()` --  Returns a pointer to a character array of the object's string.
 
