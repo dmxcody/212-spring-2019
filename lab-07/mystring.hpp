@@ -20,10 +20,10 @@ class MyString {
 
 		void reverse();
 
-		uint find_first(char);
-		uint find_first(const char*);
-		uint find_last(char);
-		uint find_last(const char*);
+		int find_first(char);
+		int find_first(const char*);
+		int find_last(char);
+		int find_last(const char*);
 
 		int compare(const char*);
 
