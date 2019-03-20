@@ -181,10 +181,10 @@ If you want more details on dynamic memory allocation, this [document](https://w
             
             void reverse();
             
-            unsigned int find_first(char);
-            unsigned int find_first(const char *);
-            unsigned int find_last(char);
-            unsigned int find_last(const char *);
+            int find_first(char);
+            int find_first(const char *);
+            int find_last(char);
+            int find_last(const char *);
             
             int compare(const char *);
             
@@ -238,7 +238,7 @@ It should tell you how many tests you are passing, which test failed, and what y
 You can compile your program using:
 
 ```bash
-$ g++ -g tests.cpp mystring.cpp -o mystring
+$ g++ -std=c++11 -g tests.cpp mystring.cpp -o mystring
 ```
 
 This bash command compiles our tests, with our implementations, and outputs them to a program called "mystring".
