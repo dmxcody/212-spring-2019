@@ -1,4 +1,4 @@
-# Lab 01: Creating a `string` class
+# Lab 07: Creating a `string` class
 
 ## 1. Introduction
 
