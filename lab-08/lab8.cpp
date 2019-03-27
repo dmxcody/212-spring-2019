@@ -64,7 +64,7 @@ bool test_merge(int n, int t) {
 
     std::random_device sd;
     std::mt19937 generator(sd());
-    std::uniform_int_distribution<int> distribution(n/20, n - (n/20));
+    std::uniform_int_distribution<int> distribution(n/20, n - 1 - (n/20));
 
     int mid = distribution(generator);
 
