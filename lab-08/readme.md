@@ -191,7 +191,7 @@ Pseudocode for the improved partition function is as follows, with `lt` represen
 Once you feel that you're ready to test your `quicksort` function, be sure to test it just as you have tested all other algorithms thus far. 
 There is no separate test for `partition()`, so you may want to take advantage of the `custom()` testing function in order to make sure you are partitioning correctly.
 
-### 4.3  Questions
+### 4.2  Questions
 
 > Question 4: What is the asymptotic complexity of quicksort?
 
