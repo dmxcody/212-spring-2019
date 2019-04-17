@@ -1,7 +1,5 @@
 # Lab 10: Binary Search Trees 
 
-TODO: Come up with a more creative lab name
-
 ## 1. Introduction
 
 Today you will be creating and implementing a Binary Search Tree given just a near-empty header file and a strict specification for each component of the class. 
