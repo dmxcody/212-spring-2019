@@ -71,6 +71,7 @@ Don't worry about `doctest.h`; for our purposes, it is magic.
 Your goal for this lab is to complete the following tasks **in order**:
 
 1. Write the header file
+2. Write the delarations for the functions in your source file.
 2. Compile the program using `make`
     1. If your program doesn't compile, fix your header and try again
 3. Implement the first method you haven't implemented yet
