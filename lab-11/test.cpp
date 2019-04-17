@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "bst_ref.h"
+#include "bst.h"
 #include <iostream>
 
 TEST_CASE("Constructor") {
@@ -16,19 +16,19 @@ TEST_CASE("Insert") {
     SUBCASE("Increasing") {
         BSTree t;
         for (int i = 0; i < 100; ++i) {
-            CHECK(t.height() == i);
+            CHECK(t.height() == i-1);
             t.insert(i);
         }
         std::cout << t.height() << std::endl;
-        REQUIRE(t.height() == 100);
+        REQUIRE(t.height() == 99);
     }
     SUBCASE("Decreasing") {
         BSTree t;
         for (int i=100; i>0; --i) {
-            CHECK(t.height() == 100-i);
+            CHECK(t.height() == 100-i-1);
             t.insert(i);
         }
-        REQUIRE(t.height() == 100);
+        REQUIRE(t.height() == 99);
     }
     SUBCASE("Perfect") {
         BSTree t;
@@ -39,14 +39,14 @@ TEST_CASE("Insert") {
         t.insert(4);
         t.insert(6);
         t.insert(8);
-        REQUIRE(t.height() == 3);
+        REQUIRE(t.height() == 2);
     }
 }
 
 TEST_CASE("Search") {
     BSTree t;
     REQUIRE_FALSE(t.search(0));
-    
+
     t.insert(0);
     REQUIRE(t.search(0));
     REQUIRE_FALSE(t.search(1));
@@ -147,9 +147,9 @@ TEST_CASE("Postorder") {
 
 TEST_CASE("Height") {
    BSTree t;
-   REQUIRE(t.height() == 0);
+   REQUIRE(t.height() == -1);
    t.insert(1);
-   REQUIRE(t.height() == 1);
+   REQUIRE(t.height() == 0);
    t.insert(2);
-   REQUIRE(t.height() == 2);
+   REQUIRE(t.height() == 1);
 }
